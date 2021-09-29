@@ -1,4 +1,4 @@
-package android.appmvp.stockmarketapp.presentation.stockslist
+package android.appmvp.traiderapp.presentation.stockslist
 
 interface IStocksListAdapterPresenter<V> {
     var itemClickListener: ((V) -> Unit)?

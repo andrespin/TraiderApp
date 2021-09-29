@@ -1,14 +1,12 @@
-package android.appmvp.stockmarketapp.presentation.stockslist
+package android.appmvp.traiderapp.presentation.stockslist
 
 
-import android.appmvp.stockmarketapp.data.model.StockCardData
-import android.appmvp.stockmarketapp.data.model.StockCardServerResponse
-import android.appmvp.stockmarketapp.presentation.navigation.IScreens
+import android.appmvp.traiderapp.data.model.StockCardData
+import android.appmvp.traiderapp.data.model.StockCardServerResponse
+import android.appmvp.traiderapp.presentation.navigation.IScreens
 import android.appmvp.traiderapp.data.di.stockslist.ISourcesGetter
 import android.appmvp.traiderapp.data.model.IStockCardsRepo
 import android.appmvp.traiderapp.data.model.StockCardStorage
-import android.appmvp.traiderapp.presentation.stockslist.IStockItemView
-import android.appmvp.traiderapp.presentation.stockslist.StocksListView
 import android.util.Log
 import com.github.terrakok.cicerone.Router
 import io.reactivex.rxjava3.core.Scheduler
@@ -37,7 +35,7 @@ class StocksListPresenter() : MvpPresenter<StocksListView>() {
             view.setDayDelta(stocksList[view.itemPosition].dayDeltaPrice ?: "")
             view.setCurrentPrice(stocksList[view.itemPosition].currentPrice ?: "")
             view.setTicker(stocksList[view.itemPosition].ticker ?: "")
-            // view.loadImage(stocksList[view.itemPosition].imageUrl ?: "")
+            view.loadImage(stocksList[view.itemPosition].imageUrl ?: "")
             putYellowStarIfFavorite(view)
             setBackground(view)
         }

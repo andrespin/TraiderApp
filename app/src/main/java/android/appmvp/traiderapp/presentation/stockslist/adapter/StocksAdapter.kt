@@ -2,7 +2,7 @@ package android.appmvp.stockmarketapp.presentation.stockslist.adapter
 
 
 import android.appmvp.traiderapp.presentation.stockslist.IStockItemView
-import android.appmvp.stockmarketapp.presentation.stockslist.IStocksListAdapterPresenter
+import android.appmvp.traiderapp.presentation.stockslist.IStocksListAdapterPresenter
 import android.appmvp.traiderapp.R
 import android.appmvp.traiderapp.databinding.ItemStockBinding
 import android.appmvp.traiderapp.presentation.stockslist.adapter.StocksViewHolder

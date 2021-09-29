@@ -1,6 +1,6 @@
 package android.appmvp.traiderapp.data.di.stockslist
 
-import android.appmvp.stockmarketapp.presentation.stockslist.StocksListPresenter
+import android.appmvp.traiderapp.presentation.stockslist.StocksListPresenter
 import android.appmvp.stockmarketapp.presentation.stockslist.adapter.StocksAdapter
 import dagger.Subcomponent
 

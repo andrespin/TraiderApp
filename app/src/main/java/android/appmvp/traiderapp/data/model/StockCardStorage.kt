@@ -1,7 +1,5 @@
 package android.appmvp.traiderapp.data.model
 
-import android.appmvp.stockmarketapp.data.model.StockCardData
-
 class StockCardStorage {
 
     fun getList() = listOf(

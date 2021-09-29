@@ -1,7 +1,7 @@
 package android.appmvp.traiderapp.data.di
 
-import android.appmvp.stockmarketapp.presentation.navigation.AndroidScreens
-import android.appmvp.stockmarketapp.presentation.navigation.IScreens
+import android.appmvp.traiderapp.presentation.navigation.AndroidScreens
+import android.appmvp.traiderapp.presentation.navigation.IScreens
 import com.github.terrakok.cicerone.Cicerone
 import com.github.terrakok.cicerone.NavigatorHolder
 import com.github.terrakok.cicerone.Router

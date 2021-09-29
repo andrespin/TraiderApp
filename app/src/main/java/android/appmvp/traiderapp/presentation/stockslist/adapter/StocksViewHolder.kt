@@ -13,7 +13,7 @@ class StocksViewHolder(private val vb: ItemStockBinding, private val fragmentCon
     IStockItemView {
 
     override fun loadImage(url: String) {
-
+        // TODO Загрузка картинки по ссылке
     }
 
     override fun setTicker(text: String) {

@@ -1,7 +1,6 @@
-package android.appmvp.stockmarketapp.presentation.stockdesc
+package android.appmvp.traiderapp.presentation.stockdesc
 
-import android.appmvp.stockmarketapp.presentation.navigation.IScreens
-import android.appmvp.traiderapp.presentation.stockdesc.StockDescView
+import android.appmvp.traiderapp.presentation.navigation.IScreens
 import com.github.terrakok.cicerone.Router
 import moxy.MvpPresenter
 import javax.inject.Inject

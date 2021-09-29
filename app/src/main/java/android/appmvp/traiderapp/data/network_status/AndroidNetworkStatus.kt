@@ -1,5 +1,6 @@
-package android.appmvp.stockmarketapp.data
+package android.appmvp.traiderapp.data.network_status
 
+import android.appmvp.traiderapp.data.network_status.INetworkStatus
 import android.content.Context
 import android.net.ConnectivityManager
 import android.net.Network

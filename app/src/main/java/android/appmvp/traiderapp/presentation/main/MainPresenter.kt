@@ -1,6 +1,6 @@
 package android.appmvp.traiderapp.presentation.main
 
-import android.appmvp.stockmarketapp.presentation.navigation.IScreens
+import android.appmvp.traiderapp.presentation.navigation.IScreens
 import com.github.terrakok.cicerone.Router
 import moxy.MvpPresenter
 import javax.inject.Inject

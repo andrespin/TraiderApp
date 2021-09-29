@@ -1,4 +1,4 @@
-package android.appmvp.stockmarketapp.data
+package android.appmvp.traiderapp.data.network_status
 
 import io.reactivex.rxjava3.core.Observable
 import io.reactivex.rxjava3.core.Single

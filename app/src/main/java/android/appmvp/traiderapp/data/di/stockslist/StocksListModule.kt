@@ -1,11 +1,10 @@
 package android.appmvp.traiderapp.data.di.stockslist
 
-import android.appmvp.stockmarketapp.data.INetworkStatus
+import android.appmvp.traiderapp.data.network_status.INetworkStatus
 import android.appmvp.traiderapp.StockMarketApp
 import android.appmvp.traiderapp.data.model.IStockCardsRepo
 import android.appmvp.traiderapp.data.model.RetrofitStockCardsRepo
 import android.appmvp.traiderapp.data.model.api.IDataSource
-import android.appmvp.traiderapp.data.storage.cash.IRoomStockCardsCache
 import dagger.Module
 import dagger.Provides
 

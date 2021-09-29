@@ -1,6 +1,6 @@
 package android.appmvp.traiderapp.data.model.api
 
-import android.appmvp.stockmarketapp.data.model.StockCardServerResponse
+import android.appmvp.traiderapp.data.model.StockCardServerResponse
 import io.reactivex.rxjava3.core.Single
 import retrofit2.http.GET
 import retrofit2.http.Query

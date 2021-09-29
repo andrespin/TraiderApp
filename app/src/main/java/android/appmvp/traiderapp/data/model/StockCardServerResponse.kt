@@ -1,4 +1,4 @@
-package android.appmvp.stockmarketapp.data.model
+package android.appmvp.traiderapp.data.model
 
 import com.google.gson.annotations.SerializedName
 

@@ -1,4 +1,4 @@
-package android.appmvp.stockmarketapp.data.model
+package android.appmvp.traiderapp.data.model
 
 import android.os.Parcel
 import android.os.Parcelable

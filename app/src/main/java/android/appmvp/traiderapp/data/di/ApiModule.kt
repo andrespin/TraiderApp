@@ -1,8 +1,8 @@
 package android.appmvp.traiderapp.data.di
 
 import android.appmvp.traiderapp.StockMarketApp
-import android.appmvp.stockmarketapp.data.AndroidNetworkStatus
-import android.appmvp.stockmarketapp.data.INetworkStatus
+import android.appmvp.traiderapp.data.network_status.AndroidNetworkStatus
+import android.appmvp.traiderapp.data.network_status.INetworkStatus
 import android.appmvp.traiderapp.data.model.api.IDataSource
 import com.google.gson.FieldNamingPolicy
 import com.google.gson.Gson

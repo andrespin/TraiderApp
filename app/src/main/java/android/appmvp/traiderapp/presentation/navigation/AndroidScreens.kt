@@ -1,8 +1,8 @@
-package android.appmvp.stockmarketapp.presentation.navigation
+package android.appmvp.traiderapp.presentation.navigation
 
-import android.appmvp.stockmarketapp.data.model.StockCardData
-import android.appmvp.stockmarketapp.presentation.stockdesc.StockDescFragment
-import android.appmvp.stockmarketapp.presentation.stockslist.StocksListFragment
+import android.appmvp.traiderapp.data.model.StockCardData
+import android.appmvp.traiderapp.presentation.stockdesc.StockDescFragment
+import android.appmvp.traiderapp.presentation.stockslist.StocksListFragment
 import com.github.terrakok.cicerone.Screen
 import com.github.terrakok.cicerone.androidx.FragmentScreen
 

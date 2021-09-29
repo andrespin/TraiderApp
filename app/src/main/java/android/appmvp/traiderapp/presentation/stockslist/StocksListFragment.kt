@@ -1,4 +1,4 @@
-package android.appmvp.stockmarketapp.presentation.stockslist
+package android.appmvp.traiderapp.presentation.stockslist
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,7 +9,6 @@ import android.appmvp.traiderapp.arguments
 import android.appmvp.stockmarketapp.presentation.stockslist.adapter.StocksAdapter
 import android.appmvp.traiderapp.databinding.FragmentStocksListBinding
 import android.appmvp.traiderapp.presentation.BackButtonListener
-import android.appmvp.traiderapp.presentation.stockslist.StocksListView
 import android.content.res.XmlResourceParser
 import androidx.recyclerview.widget.LinearLayoutManager
 import moxy.MvpAppCompatFragment

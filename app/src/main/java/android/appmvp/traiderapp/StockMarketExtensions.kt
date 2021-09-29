@@ -1,6 +1,6 @@
 package android.appmvp.traiderapp
 
-import android.appmvp.stockmarketapp.data.model.StockCardServerResponse
+import android.appmvp.traiderapp.data.model.StockCardServerResponse
 import android.appmvp.traiderapp.data.storage.RoomStockCard
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment

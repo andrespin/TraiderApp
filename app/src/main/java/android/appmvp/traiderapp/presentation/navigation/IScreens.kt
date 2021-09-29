@@ -1,6 +1,6 @@
-package android.appmvp.stockmarketapp.presentation.navigation
+package android.appmvp.traiderapp.presentation.navigation
 
-import android.appmvp.stockmarketapp.data.model.StockCardData
+import android.appmvp.traiderapp.data.model.StockCardData
 import com.github.terrakok.cicerone.Screen
 
 interface IScreens {

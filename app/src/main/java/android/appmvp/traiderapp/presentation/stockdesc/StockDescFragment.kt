@@ -1,4 +1,4 @@
-package android.appmvp.stockmarketapp.presentation.stockdesc
+package android.appmvp.traiderapp.presentation.stockdesc
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,10 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.appmvp.traiderapp.StockMarketApp
 import android.appmvp.traiderapp.arguments
-import android.appmvp.stockmarketapp.data.model.StockCardData
+import android.appmvp.traiderapp.data.model.StockCardData
 import android.appmvp.traiderapp.databinding.FragmentStockDescBinding
 import android.appmvp.traiderapp.presentation.BackButtonListener
-import android.appmvp.traiderapp.presentation.stockdesc.StockDescView
 import moxy.MvpAppCompatFragment
 import moxy.ktx.moxyPresenter
 

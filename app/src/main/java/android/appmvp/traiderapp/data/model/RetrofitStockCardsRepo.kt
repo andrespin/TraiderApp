@@ -1,7 +1,6 @@
 package android.appmvp.traiderapp.data.model
 
-import android.appmvp.stockmarketapp.data.INetworkStatus
-import android.appmvp.stockmarketapp.data.model.StockCardServerResponse
+import android.appmvp.traiderapp.data.network_status.INetworkStatus
 import android.appmvp.traiderapp.data.model.api.IDataSource
 import io.reactivex.rxjava3.core.Single
 
