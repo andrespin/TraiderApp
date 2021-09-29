@@ -48,5 +48,4 @@ class StockMarketApp : Application(), IStocksListScopeContainer, ISourcesGetter 
 
     override fun getSources(): XmlResourceParser = resources.getXml(R.xml.tickers)
 
-//    override fun getDatabase(): Database1 = Database1.getDatabase(context = this)
 }

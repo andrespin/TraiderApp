@@ -2,10 +2,14 @@ package android.appmvp.stockmarketapp.presentation.stockslist
 
 
 import android.appmvp.stockmarketapp.data.model.StockCardData
+import android.appmvp.stockmarketapp.data.model.StockCardServerResponse
 import android.appmvp.stockmarketapp.presentation.navigation.IScreens
 import android.appmvp.traiderapp.data.di.stockslist.ISourcesGetter
+import android.appmvp.traiderapp.data.model.IStockCardsRepo
 import android.appmvp.traiderapp.data.model.StockCardStorage
 import android.appmvp.traiderapp.presentation.stockslist.IStockItemView
+import android.appmvp.traiderapp.presentation.stockslist.StocksListView
+import android.util.Log
 import com.github.terrakok.cicerone.Router
 import io.reactivex.rxjava3.core.Scheduler
 import moxy.MvpPresenter
@@ -68,11 +72,9 @@ class StocksListPresenter() : MvpPresenter<StocksListView>() {
         super.onFirstViewAttach()
         viewState.init()
         loadData()
-        println("getTickers() = " + getTickers())
         stocksListAdapterPresenter.itemClickListener = { view ->
             val stockCardData = stocksListAdapterPresenter.stocksList[view.itemPosition]
             router.navigateTo(screens.openStockDescFragment(stockCardData))
-            println("Click")
         }
 
         stocksListAdapterPresenter.itemFavoriteClickListener = { view ->
@@ -84,7 +86,6 @@ class StocksListPresenter() : MvpPresenter<StocksListView>() {
             stocksListAdapterPresenter.favoriteList.remove(view.itemPosition)
             stocksListAdapterPresenter.bindView(view)
         }
-
     }
 
     @Inject
@@ -110,15 +111,72 @@ class StocksListPresenter() : MvpPresenter<StocksListView>() {
     lateinit var uiScheduler: Scheduler
 
     private fun loadData() {
+        //  getFromStockCardStorageClass()
+        downloadFromInternet()
+        viewState.updateList()
+    }
+
+    private fun getFromStockCardStorageClass() {
         stocksListAdapterPresenter.stocksList.clear()
         stocksListAdapterPresenter.stocksList.addAll(StockCardStorage().getList())
+    }
+
+    private fun downloadFromInternet() {
+        val list1 = getTickers()
+        for (i in list1.indices) {
+            putStocksDataToList(list1[i], i.toString())
+        }
+    }
+
+    @Inject
+    lateinit var stockCardsRepo: IStockCardsRepo
+
+    private fun putStocksDataToList(ticker: String, id: String) {
+        var stockCard = StockCardData(id.toInt(), ticker, "", "", "", "")
+        stockCardsRepo.getStockCurrentData(ticker, "c4qbe32ad3icc97rfi60", id)
+            .observeOn(uiScheduler)
+            .subscribe({ repos ->
+                putCurrentAndDayDeltaPriceToStockData(stockCard, repos)
+                getStockData(ticker, stockCard, id)
+            }, {
+                Log.d("Error: ", it.message!!)
+            })
+    }
+
+    private fun putCurrentAndDayDeltaPriceToStockData(
+        stockCard: StockCardData,
+        repos: StockCardServerResponse
+    ) {
+        stockCard.currentPrice = repos.currentPrice.toString()
+        stockCard.dayDeltaPrice =
+            ((repos.currentPrice ?: 0.0) - (repos.previousClosePrice ?: 0.0)).toString()
+    }
+
+    private fun getStockData(ticker: String, stockCard: StockCardData, id: String) {
+        stockCardsRepo.getStockData(ticker, "c4qbe32ad3icc97rfi60", id)
+            .observeOn(uiScheduler)
+            .subscribe({ repos ->
+                println(repos)
+                putUrlAndCompanyNameToStockData(stockCard, repos)
+                stocksListAdapterPresenter.stocksList.add(stockCard)
+                viewState.updateList()
+            }, {
+                Log.d("Error: ", it.message!!)
+            })
+    }
+
+    private fun putUrlAndCompanyNameToStockData(
+        stockCard: StockCardData,
+        repos: StockCardServerResponse
+    ) {
+        stockCard.companyName = repos.name
+        stockCard.imageUrl = repos.logoURL
     }
 
     @Inject
     lateinit var router: Router
 
     fun backClick(): Boolean {
-        println("back StockList")
         router.exit()
         return true
     }

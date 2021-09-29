@@ -9,6 +9,7 @@ import android.appmvp.traiderapp.arguments
 import android.appmvp.stockmarketapp.data.model.StockCardData
 import android.appmvp.traiderapp.databinding.FragmentStockDescBinding
 import android.appmvp.traiderapp.presentation.BackButtonListener
+import android.appmvp.traiderapp.presentation.stockdesc.StockDescView
 import moxy.MvpAppCompatFragment
 import moxy.ktx.moxyPresenter
 

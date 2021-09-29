@@ -36,6 +36,6 @@ class StockCardStorage {
             "currentPrice2",
             "dayDeltaPrice2",
             "imageUrl"
-        ),
+        )
     )
 }
