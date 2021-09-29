@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_addToFavourite"
+        android:orderInCategory="10"
+        android:title="@string/add_to_favourite" />
+
+    <item
+        android:id="@+id/action_deleteFromFavourite"
+        android:orderInCategory="10"
+        android:title="@string/delete_from_favourite" />
+
+</menu>

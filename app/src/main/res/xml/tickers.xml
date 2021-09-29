@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <ticker ticker="YNDX" />
+
+    <ticker ticker="AET" />
+
+    <ticker ticker="ANTM" />
+
+    <ticker ticker="AAPL" />
+
+    <ticker ticker="ABX" />
+
+    <ticker ticker="BBY" />
+
+    <ticker ticker="CI" />
+
+    <ticker ticker="CSC" />
+
+    <ticker ticker="DLPH" />
+
+    <ticker ticker="DST" />
+
+    <ticker ticker="EXPE" />
+
+    <ticker ticker="GM" />
+
+    <ticker ticker="GRBK" />
+
+    <ticker ticker="HES" />
+
+    <ticker ticker="HUM" />
+
+    <ticker ticker="MRVL" />
+
+    <ticker ticker="MSFT" />
+
+    <ticker ticker="FB" />
+
+    <ticker ticker="XRX" />
+
+    <ticker ticker="OZON" />
+
+    <ticker ticker="RUSL" />
+
+    <ticker ticker="RSXJ" />
+
+</resources>
