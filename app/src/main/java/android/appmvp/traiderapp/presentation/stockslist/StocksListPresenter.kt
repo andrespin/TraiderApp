@@ -41,9 +41,7 @@ class StocksListPresenter() : MvpPresenter<StocksListView>() {
         }
 
         private fun putYellowStarIfFavorite(view: IStockItemView) {
-            println("putYellowStarIfFavorite")
             if (favoriteList.contains(view.itemPosition)) {
-                println("favoriteList = " + favoriteList)
                 view.setYellowStar()
             } else {
                 view.setWhiteStar()
